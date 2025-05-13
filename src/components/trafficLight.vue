@@ -11,7 +11,7 @@ const startAutoIncrement = () => {
 
   intervalId.value = setInterval(() => {
     counter.value++;
-    if (counter.value >= 145) {
+    if (counter.value >= 60) {
       counter.value = 0;
     }
   }, 1000);
@@ -36,25 +36,25 @@ onUnmounted(() => {
       <div
         class="w-20 h-20 rounded-full transition-colors duration-500"
         :class="
-          counter <= 45
-            ? 'bg-red-600 drop-shadow-xl/25 drop-shadow-red-600'
-            : 'bg-gray-900 drop-shadow-none'
+          counter <= 15
+            ? 'bg-red-600 shadow-xl shadow-red-600/50'
+            : 'bg-gray-900 shadow-none'
         "
       ></div>
       <div
         class="w-20 h-20 rounded-full transition-colors duration-500"
         :class="
-          counter >= 46 && counter <= 55
-            ? 'bg-amber-400 drop-shadow-xl/25 drop-shadow-amber-400'
-            : 'bg-gray-900 drop-shadow-none'
+          counter >= 16 && counter <= 35
+            ? 'bg-amber-400 shadow-xl shadow-amber-400/50'
+            : 'bg-gray-900 shadow-none'
         "
       ></div>
       <div
         class="w-20 h-20 rounded-full transition-colors duration-500"
         :class="
-          counter > 55
-            ? 'bg-green-600 drop-shadow-xl/25 drop-shadow-green-600'
-            : 'bg-gray-900 drop-shadow-none'
+          counter > 35
+            ? 'bg-green-600 shadow-xl shadow-green-600/50'
+            : 'bg-gray-900 shadow-none'
         "
       ></div>
     </div>

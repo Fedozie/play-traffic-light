@@ -1,11 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import "tailwindcss";
 
-@theme{
+@theme {
+  --text-extra-large: 10rem;
   --font-digital: "VT323", monospace;
+
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px #db7b2b, 0 0 10px #e7b416, 0 0 20px #99c140,
+        0 0 20px #99c140, 0 0 30px #99c140, 0 0 40px #99c140, 0 0 50px #99c140;
+    }
+    to {
+      text-shadow: 0 0 20px #db7b2b, 0 0 30px #2dc937, 0 0 40px #2dc937,
+        0 0 50px #2dc937, 0 0 60px #2dc937, 0 0 70px #2dc937, 0 0 80px #2dc937;
+    }
+  }
 }
 
-*{
+* {
   box-sizing: 0;
 }
 
@@ -28,10 +42,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('./assets/traffic-pattern.avif');
+  background-image: url("./assets/traffic-pattern.avif");
   background-position: center;
 }
-
-
-
-
